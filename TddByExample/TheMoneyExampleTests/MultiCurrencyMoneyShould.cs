@@ -1,3 +1,4 @@
+using TheMoneyExample;
 using Xunit;
 
 namespace TheMoneyExampleTests
@@ -7,7 +8,7 @@ namespace TheMoneyExampleTests
         [Fact]
         public void TestMultiplication()
         {
-            Dollar five = new Dollar(5);
+            var five = new Dollar(5);
             five.times(2);
             Assert.Equal(10, five.amount);
         }
