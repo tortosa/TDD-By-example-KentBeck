@@ -8,14 +8,13 @@ namespace TheMoneyExample
 {
     public class Dollar : Money
     {
-        public Dollar(int amount)
+        public Dollar(int amount, string currency) : base(amount, currency)
         {
-            this.amount = amount;
         }
 
         public override Money times(int multiplier)
         {
-            return new Dollar(amount * multiplier);
+            return Money.dollar(amount * multiplier);
         }
     }
 }

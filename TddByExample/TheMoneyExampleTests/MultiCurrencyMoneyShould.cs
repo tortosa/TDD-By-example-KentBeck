@@ -30,5 +30,12 @@ namespace TheMoneyExampleTests
             Assert.False(Money.franc(5).Equals(Money.franc(6)));
             Assert.False(Money.franc(5).Equals(Money.dollar(6)));
         }
+
+        [Fact]
+        public void TestCurrency()
+        {
+            Assert.True("USD".Equals(Money.dollar(1).Currency));
+            Assert.True("CHF".Equals(Money.franc(1).Currency));
+        }
     }
 }
