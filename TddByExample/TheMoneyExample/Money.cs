@@ -12,7 +12,7 @@ namespace TheMoneyExample
 
         public bool Equals(Money obj)
         {
-            return amount == obj?.amount;
+            return amount == obj?.amount && this.GetType().Equals(obj.GetType());
         }
     }
 }
