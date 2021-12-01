@@ -15,9 +15,9 @@ namespace TheMoneyExample
             this.amount = amount;
         }
 
-        public void times(int multiplier)
+        public Dollar times(int multiplier)
         {
-            this.amount *= multiplier;
+            return new Dollar(amount * multiplier);
         }
     }
 }
