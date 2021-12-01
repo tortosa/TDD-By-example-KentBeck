@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheMoneyExample
+namespace TheMoneyExample 
 {
-    public class Dollar
+    public class Dollar : IEquatable<Dollar>
     {
         public int amount;
 
@@ -18,6 +18,10 @@ namespace TheMoneyExample
         public Dollar times(int multiplier)
         {
             return new Dollar(amount * multiplier);
+        }
+        public bool Equals(Dollar? other)
+        {
+            return amount == other?.amount;
         }
     }
 }
