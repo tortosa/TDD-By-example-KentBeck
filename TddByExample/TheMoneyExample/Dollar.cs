@@ -8,7 +8,7 @@ namespace TheMoneyExample
 {
     public class Dollar : IEquatable<Dollar>
     {
-        public int amount;
+        private readonly int amount;
 
         public Dollar(int amount)
         {
