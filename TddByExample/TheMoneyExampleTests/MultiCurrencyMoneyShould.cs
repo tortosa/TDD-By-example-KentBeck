@@ -8,27 +8,27 @@ namespace TheMoneyExampleTests
         [Fact]
         public void TestMultiplication()
         {
-            var five = new Dollar(5);
-            Assert.True(new Dollar(10).Equals(five.times(2)));
-            Assert.True(new Dollar(15).Equals(five.times(3)));
+            Money five = Money.dollar(5);
+            Assert.True(Money.dollar(10).Equals(five.times(2)));
+            Assert.True(Money.dollar(15).Equals(five.times(3)));
         }
 
         [Fact]
         public void TestFrancMultiplication()
         {
-            var five = new Franc(5);
-            Assert.True(new Franc(10).Equals(five.times(2)));
-            Assert.True(new Franc(15).Equals(five.times(3)));
+            var five = Money.franc(5);
+            Assert.True(Money.franc(10).Equals(five.times(2)));
+            Assert.True(Money.franc(15).Equals(five.times(3)));
         }
 
         [Fact]
         public void TestEquality()
         {
-            Assert.True(new Dollar(5).Equals(new Dollar(5)));
-            Assert.False(new Dollar(5).Equals(new Dollar(6)));
-            Assert.True(new Franc(5).Equals(new Franc(5)));
-            Assert.False(new Franc(5).Equals(new Franc(6)));
-            Assert.False(new Franc(5).Equals(new Dollar(6)));
+            Assert.True(Money.dollar(5).Equals(Money.dollar(5)));
+            Assert.False(Money.dollar(5).Equals(Money.dollar(6)));
+            Assert.True(Money.franc(5).Equals(Money.franc(5)));
+            Assert.False(Money.franc(5).Equals(Money.franc(6)));
+            Assert.False(Money.franc(5).Equals(Money.dollar(6)));
         }
     }
 }
