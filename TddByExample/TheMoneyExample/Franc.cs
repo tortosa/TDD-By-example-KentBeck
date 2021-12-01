@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheMoneyExample 
+namespace TheMoneyExample
 {
-    public class Franc : IEquatable<Franc>
+    public class Franc : Money
     {
-        private readonly int amount;
-
         public Franc(int amount)
         {
             this.amount = amount;
@@ -18,10 +16,6 @@ namespace TheMoneyExample
         public Franc times(int multiplier)
         {
             return new Franc(amount * multiplier);
-        }
-        public bool Equals(Franc? other)
-        {
-            return amount == other?.amount;
         }
     }
 }

@@ -9,16 +9,16 @@ namespace TheMoneyExampleTests
         public void TestMultiplication()
         {
             var five = new Dollar(5);
-            Assert.Equal(new Dollar(10), five.times(2));
-            Assert.Equal(new Dollar(15), five.times(3));
+            Assert.True(new Dollar(10).Equals(five.times(2)));
+            Assert.True(new Dollar(15).Equals(five.times(3)));
         }
 
         [Fact]
         public void TestFrancMultiplication()
         {
             var five = new Franc(5);
-            Assert.Equal(new Franc(10), five.times(2));
-            Assert.Equal(new Franc(15), five.times(3));
+            Assert.True(new Franc(10).Equals(five.times(2)));
+            Assert.True(new Franc(15).Equals(five.times(3)));
         }
 
         [Fact]
